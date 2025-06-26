@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #000080;
+  --secondary-color: #ff0000;
+}
+body {
+  overflow-x: hidden;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+.school-name h5 {
+  color: var(--primary-color);
+  font-size: clamp(16px, 2vw, 32px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.school-name p {
+  font-size: 12px;
+  color: var(--primary-color);
+}
+/*@media (min-width: 765px) and (max-width: 992px) {
+  .school-name p {
+    font-size: 12px;
+  }
+}*/
+@media (max-width: 460px) {
+  .school-name h5 {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .school-name p {
+    font-size: 10px;
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+  }
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.tall {
+  grid-row: span 2;
+}
+.wide {
+  grid-column: span 2;
+}
+@media (max-width: 768px) {
+  .wide,
+  .tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+.google-map-con {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.google-map-con iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-content-con {
+  text-align: left;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+
+.contact-info-footer h2,
+.quick-links h2,
+.follow-us h2 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.contact-info-footer ul li a,
+.quick-links ul li a,
+.follow-us ul li a {
+  color: #fff;
+}
+.contact-info-footer p {
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .footer-content-con {
+    margin-left: 16px;
+  }
+  .contact-info-footer p,
+  .quick-links ul li a,
+  .follow-us ul li a {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .contact-info-footer h2,
+  .quick-links h2,
+  .follow-us h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .copyright-text {
+    font-size: 14px;
+  }
+}
+.quick-links {
+  padding-left: 32px;
+}
+.copyright-text {
+  border-top: 1px solid rgba(250, 250, 250, 0.15);
+}
+.heading-page.gallery-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/gallery-background-img.PNG) !important;
+}
+.main-gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.main-gallery-img:hover {
+  transform: scale(1.03);
+}
